@@ -5,48 +5,6 @@
         <FullName/>
         <Description/>
         <Configuration>
-            <DbConnectionPoolConfigs>
-                <ConfigClass>org.openeai.config.DbConnectionPoolConfig</ConfigClass>
-                <ObjectClass>edu.uillinois.aits.passwordManager.EncryptedBasicDataSource</ObjectClass>
-                <!-- Normal Connections -->
-                <DbConnectionPoolConfig dbConnectPassword="NOT USED" dbConnectString="jdbc:log:oracle.jdbc.driver.OracleDriver:oracle:thin:@oradev.admin.uillinois.edu:1521:APPSDEV" dbConnectUserId="UI2JWAITSWEBSERVICE" dbDriverName="net.rkbloom.logdriver.LogDriver" dbPoolSize="2" name="WebServiceDbPool"/>
-            </DbConnectionPoolConfigs>
-            <DbConnectionPoolConfigs>
-                <ConfigClass>org.openeai.config.DbConnectionPoolConfig</ConfigClass>
-                <ObjectClass>edu.uillinois.aits.passwordManager.EncryptedBasicDataSource</ObjectClass>
-                <DbConnectionPoolConfig dbConnectPassword="NOT USED" dbConnectString="jdbc:log:oracle.jdbc.driver.OracleDriver:oracle:thin:@urbbandb1.admin.uillinois.edu:1521:BANDEV" dbConnectUserId="ui2jgbannerrequest" dbDriverName="net.rkbloom.logdriver.LogDriver" dbPoolSize="2" name="BRGDbPool"/>
-            </DbConnectionPoolConfigs>
-            <PropertyConfigs>
-                <ConfigClass>org.openeai.config.PropertyConfig</ConfigClass>
-                <PropertyConfig name="dummyDataIpAddresses">
-                    <!--Property>
-						<PropertyName>0:0:0:0:0:0:0:1</PropertyName>
-						<PropertyValue>localhost</PropertyValue>
-					</Property>
-					<Property>
-						<PropertyName>127.0.0.1</PropertyName>
-						<PropertyValue>localhost</PropertyValue>
-					</Property-->
-                    <Property>
-                        <PropertyName>64.22.182.183</PropertyName>
-                        <PropertyValue>chiasprod1a.admin.uillinois.edu</PropertyValue>
-                    </Property>
-                    <Property>
-                        <PropertyName>64.22.182.184</PropertyName>
-                        <PropertyValue>chiasprod1b.admin.uillinois.edu</PropertyValue>
-                    </Property>
-                </PropertyConfig>
-                <PropertyConfig name="DataValidators">
-                    <Property>
-                        <PropertyName>Education_v1_0</PropertyName>
-                        <PropertyValue>edu.uillinois.aits.webservice.validator.Education_v1_0</PropertyValue>
-                    </Property>
-                    <Property>
-                        <PropertyName>HighSchool_v1_0</PropertyName>
-                        <PropertyValue>edu.uillinois.aits.webservice.validator.HighSchool_v1_0</PropertyValue>
-                    </Property>
-                </PropertyConfig>
-            </PropertyConfigs>
             <PropertyConfigs>
                 <ConfigClass>org.openeai.config.PropertyConfig</ConfigClass>
                 <PropertyConfig name="KafkaProperties">
