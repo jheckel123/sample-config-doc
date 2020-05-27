@@ -5,9 +5,6 @@
         <FullName/>
         <Description/>
         <Configuration>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- GENERAL OBJECTS -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
             <DbConnectionPoolConfigs>
                 <ConfigClass>org.openeai.config.DbConnectionPoolConfig</ConfigClass>
                 <ObjectClass>edu.uillinois.aits.passwordManager.EncryptedBasicDataSource</ObjectClass>
@@ -19,115 +16,6 @@
                 <ObjectClass>edu.uillinois.aits.passwordManager.EncryptedBasicDataSource</ObjectClass>
                 <DbConnectionPoolConfig dbConnectPassword="NOT USED" dbConnectString="jdbc:log:oracle.jdbc.driver.OracleDriver:oracle:thin:@urbbandb1.admin.uillinois.edu:1521:BANDEV" dbConnectUserId="ui2jgbannerrequest" dbDriverName="net.rkbloom.logdriver.LogDriver" dbPoolSize="2" name="BRGDbPool"/>
             </DbConnectionPoolConfigs>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- CROSS FUNCTIONAL -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <!-- org.any_openeai_enterprise objects -->
-                <BusinessObjectConfig name="AdHoc" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.AdHoc" commandName="AdHoc" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="AdHocQueryObject" objectClass="org.any_openeai_enterprise.moa.objects.resources.v1_0.AdHocQueryObject" commandName="AdHocQueryObject"/>
-                <BusinessObjectConfig name="EnterpriseSession" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.EnterpriseSession" commandName="EnterpriseSessionRequest"/>
-                <BusinessObjectConfig name="EnterpriseUser" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.EnterpriseUser" commandName="EnterpriseUserRequest" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="InstitutionalIdentity" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.InstitutionalIdentity" commandName="InstitutionalIdentity" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="UnknownPerson" objectClass="org.any_openeai_enterprise.moa.objects.resources.v1_0.UnknownPerson" commandName="UnknownPerson"/>
-                <BusinessObjectConfig name="NetId" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.NetId" commandName="NetIdRequest" primeDocs="provide,create,generate,query"/>
-                <BusinessObjectConfig name="NetIdAssignment" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.NetIdAssignment" commandName="NetIdAssignmentRequest" primeDocs="create,provide,query,delete"/>
-                <BusinessObjectConfig name="NetIdList" objectClass="org.any_openeai_enterprise.moa.jmsobjects.coreapplication.v1_0.NetIdList" commandName="NetIdListRequest" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="QueryFilter" objectClass="org.any_openeai_enterprise.moa.objects.resources.v1_0.QueryFilter" commandName="QueryFilter"/>
-                <!-- edu.uillinois objects -->
-                <BusinessObjectConfig name="List.v1_0" objectClass="edu.uillinois.moa.jmsobjects.validation.v1_0.List" commandName="List" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="ListSpecification.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.ListSpecification" commandName="ListSpecification"/>
-                <BusinessObjectConfig name="edu.uillinois.Services.EmailMessage.v1_0" objectClass="edu.uillinois.moa.jmsobjects.services.v1_0.EmailMessage" commandName="EmailMessage" primeDocs="create"/>
-                <BusinessObjectConfig name="NetId.v1_1" objectClass="edu.uillinois.moa.objects.resources.v1_1.NetId" commandName="NetId"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.EnterpriseUser.v1_1" objectClass="edu.uillinois.moa.jmsobjects.person.v1_1.EnterpriseUser" commandName="EnterpriseUser" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.EnterpriseUserProperties.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.EnterpriseUserProperties" commandName="EnterpriseUserProperties" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Services.ApplicationParameters.v1_0" objectClass="edu.uillinois.moa.jmsobjects.services.v1_0.ApplicationParameters" commandName="ApplicationParameters" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="ApplicationParametersQuerySpec.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.ApplicationParametersQuerySpec" commandName="ApplicationParametersQuerySpec"/>
-                <BusinessObjectConfig name="QueryCriteria.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.QueryCriteria" commandName="QueryCriteria"/>
-                <BusinessObjectConfig name="edu.uillinois.Services.EnterpriseIdValidation.v1_0" objectClass="edu.uillinois.moa.jmsobjects.services.v1_0.EnterpriseIdValidation" commandName="EnterpriseIdValidation" primeDocs="provide,response,query"/>
-                <BusinessObjectConfig name="EnterpriseIdValidationQuery.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.EnterpriseIdValidationQuery" commandName="EnterpriseIdValidationQuery"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.InstitutionalIdentityData.v1_2" objectClass="edu.uillinois.moa.jmsobjects.person.v1_2.InstitutionalIdentityData" commandName="InstitutionalIdentityData" primeDocs="provide,response,query"/>
-                <BusinessObjectConfig name="LightweightPerson" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <BusinessObjectConfig name="LightweightPerson.v1_2" objectClass="edu.uillinois.moa.objects.resources.v1_2.LightweightPerson" commandName="LightweightPerson"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- EMPLOYEE -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <!-- com.sct objects -->
-                <BusinessObjectConfig name="BasicEmployee.v1_0" objectClass="com.sct.moa.jmsobjects.employee.v1_0.BasicEmployee" commandName="BasicEmployeeRequest" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="LightweightPerson.v1_0" objectClass="com.sct.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <!-- edu.uillinois objects -->
-                <BusinessObjectConfig name="EmployeeLeaveBalance.v1_0" objectClass="edu.uillinois.moa.jmsobjects.employee.v1_0.EmployeeLeaveBalance" commandName="EmployeeLeaveBalance" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="JobAssignment.v1_0" objectClass="edu.uillinois.moa.jmsobjects.employee.v1_0.JobAssignment" commandName="JobAssignment" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="LightweightPerson" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <BusinessObjectConfig name="LightweightPersonWithAttribute.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPersonWithAttribute" commandName="LightweightPersonWithAttribute"/>
-                <BusinessObjectConfig name="edu.uillinois.Employee.BasicEmployee.v1_0" objectClass="edu.uillinois.moa.jmsobjects.employee.v1_0.BasicEmployee" commandName="BasicEmployee" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Employee.EmployeeDeduction.v1_0" objectClass="edu.uillinois.moa.jmsobjects.employee.v1_0.EmployeeDeduction" commandName="EmployeeDeduction" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Employee.NewHireFormList.v1_0" objectClass="edu.uillinois.moa.jmsobjects.employee.v1_0.NewHireFormList" commandName="NewHireFormList" primeDocs="provide,query"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- FINANCE -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <!-- edu.uillinois objects -->
-                <BusinessObjectConfig name="edu.uillinois.Finance.AccountsReceivableTransaction.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.AccountsReceivableTransaction" commandName="AccountsReceivableTransaction" primeDocs="create,provide,query"/>
-                <BusinessObjectConfig name="AccountsReceivableTransactionQuerySpec.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.AccountsReceivableTransactionQuerySpec" commandName="AccountsReceivableTransactionQuerySpec"/>
-                <BusinessObjectConfig name="EncumbranceQuerySpec.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.EncumbranceQuerySpec" commandName="EncumbranceQuerySpec"/>
-                <BusinessObjectConfig name="InvoiceQuery.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.InvoiceQuery" commandName="InvoiceQuery"/>
-                <BusinessObjectConfig name="InvoiceQuery.v1_1" objectClass="edu.uillinois.moa.objects.resources.v1_1.InvoiceQuery" commandName="InvoiceQuery"/>
-                <BusinessObjectConfig name="InstitutionalIdQuerySpec.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.InstitutionalIdQuerySpec" commandName="InstitutionalIdQuerySpec"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.LightweightAccountsReceivableTransaction.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.LightweightAccountsReceivableTransaction" commandName="LightweightAccountsReceivableTransaction" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="LightweightBannerVendor.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightBannerVendor" commandName="LightweightBannerVendor"/>
-                <BusinessObjectConfig name="LightweightPerson" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <BusinessObjectConfig name="LightweightPersonWithAttribute.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPersonWithAttribute" commandName="LightweightPersonWithAttribute"/>
-                <BusinessObjectConfig name="VendorEntitySeed.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.VendorEntitySeed" commandName="VendorEntitySeed"/>
-                <BusinessObjectConfig name="VendorEntityUniqueId.v1_0" objectClass="edu.uillinois.moa.jmsobjects.procurement.v1_0.VendorEntityUniqueId" commandName="VendorEntityUniqueId" primeDocs="generate"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.BannerVendor.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.BannerVendor" commandName="BannerVendor" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.Encumbrance.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.Encumbrance" commandName="Encumbrance" primeDocs="provide,create,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.FinanceUserSecurity.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.FinanceUserSecurity" commandName="FinanceUserSecurity" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.Invoice.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.Invoice" commandName="Invoice" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.Invoice.v1_1" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_1.Invoice" commandName="Invoice" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.LightweightInvoice.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.LightweightInvoice" commandName="LightweightInvoice" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.SponsorPayment.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.SponsorPayment" commandName="SponsorPayment" primeDocs="create,provide"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.SponsorPayment.v1_1" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_1.SponsorPayment" commandName="SponsorPayment" primeDocs="create,provide,query"/>
-                <BusinessObjectConfig name="SponsorPaymentQuerySpec" objectClass="edu.uillinois.moa.objects.resources.v1_1.SponsorPaymentQuerySpec" commandName="SponsorPaymentQuerySpec"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.StudentAccountBalance.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.StudentAccountBalance" commandName="StudentAccountBalance" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="QueryCriteria.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.QueryCriteria" commandName="QueryCriteria"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <BusinessObjectConfig name="JournalVoucherQuerySpec.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.JournalVoucherQuerySpec" commandName="JournalVoucherQuerySpec"/>
-                <BusinessObjectConfig name="edu.uillinois.Finance.JournalVoucher.v1_0" objectClass="edu.uillinois.moa.jmsobjects.finance.v1_0.JournalVoucher" commandName="JournalVoucher" primeDocs="provide,create,query"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- PERSON -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <!-- com.sct objects -->
-                <BusinessObjectConfig name="BasicPerson.v1_1" objectClass="com.sct.moa.jmsobjects.person.v1_1.BasicPerson" commandName="BasicPersonRequest" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="LightweightPerson.v1_1" objectClass="com.sct.moa.objects.resources.v1_1.LightweightPerson" commandName="LightweightPerson"/>
-                <!-- edu.uillinois objects -->
-                <BusinessObjectConfig name="LightweightPerson" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <BusinessObjectConfig name="LightweightPerson.edu.v1_1" objectClass="edu.uillinois.moa.objects.resources.v1_1.LightweightPerson" commandName="LightweightPerson"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.BasicPerson.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.BasicPerson" commandName="BasicPerson" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.BasicPerson.v1_1" objectClass="edu.uillinois.moa.jmsobjects.person.v1_1.BasicPerson" commandName="BasicPerson" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.DriversLicense.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.DriversLicense" commandName="DriversLicense" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.Education.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.Education" commandName="Education" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.EmergencyContact.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.EmergencyContact" commandName="EmergencyContact" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.HighSchool.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.HighSchool" commandName="HighSchool" primeDocs="provide,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.LicenseCertification.v1_0" objectClass="edu.uillinois.moa.jmsobjects.person.v1_0.LicenseCertification" commandName="LicenseCertification" primeDocs="provide,create,query,update"/>
-                <BusinessObjectConfig name="edu.uillinois.Person.WorkHistory.v1_1" objectClass="edu.uillinois.moa.jmsobjects.person.v1_1.WorkHistory" commandName="WorkHistory" primeDocs="provide,create,query,update"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
             <PropertyConfigs>
                 <ConfigClass>org.openeai.config.PropertyConfig</ConfigClass>
                 <PropertyConfig name="dummyDataIpAddresses">
@@ -159,60 +47,6 @@
                     </Property>
                 </PropertyConfig>
             </PropertyConfigs>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- STUDENT -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <!-- com.sct objects -->
-                <BusinessObjectConfig name="AdmissionsApplication.v1_0" objectClass="com.sct.moa.jmsobjects.student.v1_0.AdmissionsApplication" commandName="AdmissionsApplicationRequest" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="LightweightPerson.v1_0" objectClass="com.sct.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <!-- edu.uillinois objects -->
-                <BusinessObjectConfig name="AdmissionsApplicationDecision.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.AdmissionsApplicationDecision" commandName="AdmissionsApplicationDecisionCreateRequest" primeDocs="create"/>
-                <BusinessObjectConfig name="LightweightPerson" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPerson" commandName="LightweightPerson"/>
-                <BusinessObjectConfig name="LightweightPersonWithAttribute.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.LightweightPersonWithAttribute" commandName="LightweightPersonWithAttribute"/>
-                <BusinessObjectConfig name="StudentEnrollment.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.StudentEnrollment" commandName="StudentEnrollment" primeDocs="create,query"/>
-                <BusinessObjectConfig name="WebAdmissionsIdentifier.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.WebAdmissionsIdentifier" commandName="WebAdmissionsIdentifier"/>
-                <BusinessObjectConfig name="edu.uillinois.Student.AdmissionsApplication.v2_0" objectClass="edu.uillinois.moa.jmsobjects.student.v2_0.AdmissionsApplication" commandName="AdmissionsApplication" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Student.BasicStudent.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.BasicStudent" commandName="BasicStudent" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Student.CourseSectionEnrollmentSummary.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.CourseSectionEnrollmentSummary" commandName="CourseSectionEnrollmentSummary" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="edu.uillinois.Student.WebAdmissionsApplication.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.WebAdmissionsApplication" commandName="WebAdmissionsApplication" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="QueryCriteria.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.QueryCriteria" commandName="QueryCriteria"/>
-                <BusinessObjectConfig name="AHGrade.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.AHGrade" commandName="AHGrade" primeDocs="update"/>
-                <BusinessObjectConfig name="AHGradeQuery.v1_0" objectClass="edu.uillinois.moa.objects.resources.v1_0.AHGradeQuery" commandName="AHGradeQuery"/>
-                <BusinessObjectConfig name="AHGradeSummary.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.AHGradeSummary" commandName="AHGradeSummary" primeDocs="provide,query"/>
-                <BusinessObjectConfig name="StudentRoster.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.StudentRoster" commandName="StudentRoster" primeDocs="provide,query"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
-            <MessageObjectConfigs translationType="application" xmlDocumentValidation="false">
-                <SenderAppId>edu.uillinois.aits.webservice</SenderAppId>
-                <Authentication>
-                    <UserId>AITSWebService</UserId>
-                </Authentication>
-                <ConfigClass>org.openeai.config.MessageObjectConfig</ConfigClass>
-                <LayoutManager>
-                    <InputLayout type="xml">
-                        <ObjectClass>org.openeai.layouts.XmlLayout</ObjectClass>
-                    </InputLayout>
-                    <OutputLayout type="xml">
-                        <ObjectClass>org.openeai.layouts.XmlLayout</ObjectClass>
-                    </OutputLayout>
-                </LayoutManager>
-                <MessageObjectConfig name="AdmissionsApplicationLight.v2_0">
-                    <CommandName>AdmissionsApplicationLight</CommandName>
-                    <ObjectClass>edu.uillinois.aits.persistencehelpers.student.AdmissionsApplication</ObjectClass>
-                    <!-- ignore all validation since is a LITE version object -->
-                    <EnterpriseObjectDocument docUri="http://xml.admin.uillinois.edu/xml/configs/messaging/environments/development/enterpriseobjects/3.0/edu/uillinois/Student/2.0/AdmissionsApplicationEO.xml" ignoreMissingFields="true" ignoreValidation="true"/>
-                </MessageObjectConfig>
-            </MessageObjectConfigs>
-            <BusinessObjectConfigs authenticationSignature="820197d5-6b08-42c5-b47c-36d3528fe65e" authenticationUserId="AITSWebService" environment="development" senderAppId="edu.uillinois.aits.webservice">
-                <ConfigClass>org.openeai.config.BusinessObjectConfig</ConfigClass>
-                <BusinessObjectConfig name="edu.uillinois.Student.StudentRoster.v1_0" objectClass="edu.uillinois.moa.jmsobjects.student.v1_0.StudentRoster" commandName="StudentRoster" primeDocs="provide,query"/>
-                <!--BusinessObjectConfig name="xxx" objectClass="xxx" commandName="xxx" primeDocs="provide,response,create,delete,query,update"/-->
-            </BusinessObjectConfigs>
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-            <!-- KAFKA PROPERTIES -->
-            <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
             <PropertyConfigs>
                 <ConfigClass>org.openeai.config.PropertyConfig</ConfigClass>
                 <PropertyConfig name="KafkaProperties">
